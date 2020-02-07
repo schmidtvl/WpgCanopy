@@ -6,19 +6,11 @@ import {
   View,
   StyleSheet,
   TouchableOpacity,
+  TouchableHighlight,
   FlatList,
 } from 'react-native';
 
 import treeData from './wpg_trees_test.json';
-
-// function HomeScreen({navigation}) {
-//   return (
-//     <Button
-//       title="Go to Jane's profile"
-//       onPress={() => navigation.navigate('Profile', {name: 'Jane'})}
-//     />
-//   );
-//}
 
 export default class TreeList extends Component {
   constructor(props) {
