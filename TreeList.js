@@ -30,7 +30,7 @@ export default class TreeList extends Component {
   render() {
     if (this.state.isLoading) {
       return (
-        <View style={{flex: 1, paddingTop: 20, paddingLeft: 20}}>
+        <View style={{flex: 1, paddingTop: 10, paddingLeft: 20}}>
           <ActivityIndicator />
         </View>
       );
@@ -40,7 +40,18 @@ export default class TreeList extends Component {
       <View style={styles.container}>
         <FlatList
           data={this.state.dataSource}
-          renderItem={({item}) => <Text>{item.common_name}</Text>}
+          renderItem={({item}) => (
+            <TouchableHighlight
+              onPress={() =>
+                this.props.navigation.navigate('TreeDetail', {
+                  treeDetail: item,
+                })
+              }>
+              <View>
+                <Text>{item.common_name}</Text>
+              </View>
+            </TouchableHighlight>
+          )}
           keyExtractor={(item, index) => index}
         />
       </View>

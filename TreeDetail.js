@@ -9,39 +9,17 @@ import {
   FlatList,
 } from 'react-native';
 
-import treeData from './wpg_trees_test.json';
-
 export default class TreeDetail extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isLoading: true,
-      dataSource: [],
-    };
+    this.state = {};
   }
 
-  componentDidMount() {
-    this.setState({
-      dataSource: treeData,
-      isLoading: false,
-    });
-  }
   render() {
-    if (this.state.isLoading) {
-      return (
-        <View style={{flex: 1, paddingTop: 20, paddingLeft: 20}}>
-          <ActivityIndicator />
-        </View>
-      );
-    }
-
+    //const item = this.props.navigation.getParams('treeDetail');
     return (
       <View style={styles.container}>
-        <FlatList
-          data={this.state.dataSource}
-          renderItem={({item}) => <Text>{item.common_name}</Text>}
-          keyExtractor={(item, index) => index}
-        />
+        <Text>{'tree detail'}</Text>
       </View>
     );
   }
