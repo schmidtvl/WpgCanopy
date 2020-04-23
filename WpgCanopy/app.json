@@ -1,0 +1,17 @@
+{
+  "name": "WpgCanopy",
+  "displayName": "WpgCanopy",
+  "expo": {
+    "name": "WpgCanopy",
+    "slug": "WpgCanopy",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
